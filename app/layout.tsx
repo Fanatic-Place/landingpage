@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Lance ton modèle IA sur Fanatic",
+  title: "Lance ta modèle IA sur Fanatic",
   description:
     "Formation gratuite + plateforme dédiée aux créateurs IA. Rejoins +1000 créateurs qui génèrent des revenus avec leur modèle IA.",
   openGraph: {
-    title: "Lance ton modèle IA sur Fanatic",
+    title: "Lance ta modèle IA sur Fanatic",
     description:
       "Formation gratuite + plateforme dédiée aux créateurs IA",
     url: "https://creators.fanaticplace.fr",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lance ton modèle IA sur Fanatic",
+    title: "Lance ta modèle IA sur Fanatic",
     description: "Formation gratuite + plateforme dédiée aux créateurs IA",
     images: [
       "https://image2url.com/r2/default/images/1775312304434-668be462-d466-43eb-ae55-d24617b615c6.jpeg",

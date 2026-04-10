@@ -97,7 +97,7 @@ export default function Page() {
         </div>
 
         <h1 className="mx-auto max-w-3xl text-4xl font-extrabold leading-tight tracking-tight text-white md:text-6xl">
-          Ton modèle IA peut générer ses{" "}
+          Ta modèle IA peut générer ses{" "}
           <span
             style={{
               background: "linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%)",
@@ -109,11 +109,6 @@ export default function Page() {
             premiers revenus cette semaine
           </span>
         </h1>
-
-        <p className="mx-auto mt-5 max-w-xl text-base text-[#a1a1aa] md:text-lg">
-          Accède à la formation complète gratuitement et lance-toi sur la
-          plateforme pensée pour les créateurs IA
-        </p>
 
         <div className="mt-8 flex flex-col items-center gap-3">
           <a
@@ -147,19 +142,12 @@ export default function Page() {
           <div
             className="relative overflow-hidden rounded-2xl"
             style={{
-              aspectRatio: "16/9",
               background: "#111111",
               border: "1px solid rgba(255,255,255,0.08)",
               boxShadow: "0 25px 60px rgba(0,0,0,0.6)",
             }}
           >
-            <video
-              className="h-full w-full object-cover"
-              controls
-              playsInline
-              preload="metadata"
-              poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%23111111'/%3E%3Ccircle cx='400' cy='225' r='50' fill='rgba(139,92,246,0.2)' stroke='rgba(139,92,246,0.6)' stroke-width='2'/%3E%3Cpolygon points='385,205 385,245 425,225' fill='%238b5cf6'/%3E%3Ctext x='400' y='310' text-anchor='middle' fill='%23a1a1aa' font-family='Inter,sans-serif' font-size='16'%3ERegarder la vid%C3%A9o%3C/text%3E%3C/svg%3E"
-            >
+            <video controls playsInline preload="metadata" style={{ width: "100%" }}>
               <source
                 src="https://image2url.com/r2/default/videos/1775831427597-7b4534e5-ed35-431a-be07-9da065ef12eb.mov"
                 type="video/mp4"
@@ -216,7 +204,7 @@ export default function Page() {
                 Un modèle IA qui tourne 24h/24
               </h3>
               <p className="text-sm leading-relaxed text-[#a1a1aa]">
-                Ton modèle génère des revenus même quand tu dors. Pas besoin
+                Ta modèle génère des revenus même quand tu dors. Pas besoin
                 d&apos;être présent en permanence.
               </p>
             </div>
@@ -295,15 +283,16 @@ export default function Page() {
             Des vrais créateurs. Des vrais résultats. En quelques heures.
           </p>
 
-          <div className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 md:gap-4">
             {proofs.map((proof, i) => (
-              <div key={i} className="flex flex-col gap-2">
+              <div key={i} className="flex flex-col gap-2" style={{ padding: "8px" }}>
                 {/* Badge */}
                 <div
-                  className="rounded-lg px-3 py-1.5 text-center text-xs font-bold text-white"
+                  className="rounded-lg px-3 py-1.5 text-center font-bold text-white"
                   style={{
                     background:
                       "linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)",
+                    fontSize: "clamp(12px, 2.5vw, 14px)",
                   }}
                 >
                   {proof.name} — {proof.result}
@@ -314,9 +303,11 @@ export default function Page() {
                   src={proof.img}
                   alt={`${proof.name} — ${proof.result}`}
                   loading="lazy"
-                  className="w-full rounded-xl object-cover"
+                  className="rounded-xl"
                   style={{
-                    aspectRatio: "4/5",
+                    width: "100%",
+                    height: "auto",
+                    objectFit: "contain",
                     boxShadow: "0 8px 24px rgba(0,0,0,0.5)",
                     border: "1px solid rgba(255,255,255,0.06)",
                   }}
@@ -347,7 +338,7 @@ export default function Page() {
           }}
         >
           <h2 className="mb-4 text-3xl font-extrabold text-white md:text-4xl">
-            Prêt à lancer ton modèle IA ?
+            Prêt à lancer ta modèle IA ?
           </h2>
           <p className="mb-8 text-base text-[#a1a1aa] md:text-lg">
             La formation est gratuite.
