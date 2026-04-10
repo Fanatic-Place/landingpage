@@ -96,7 +96,7 @@ export default function Page() {
           Formation 100% gratuite · Accès immédiat
         </div>
 
-        <h1 className="mx-auto max-w-3xl text-4xl font-extrabold leading-tight tracking-tight text-white md:text-6xl">
+        <h1 className="mx-auto max-w-3xl text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl md:text-5xl">
           Ta modèle IA peut générer ses{" "}
           <span
             style={{
