@@ -6,7 +6,7 @@ declare global {
   }
 }
 
-const CTA_URL = "https://fanaticplace.fr/fr-FR/auth/login";
+const CTA_URL = "https://discord.gg/CYcUDngnvp";
 
 function trackLead() {
   if (typeof window !== "undefined" && window.fbq) {
@@ -78,9 +78,9 @@ export default function Page() {
       style={{ backgroundColor: "#0d0d0d" }}
       className="min-h-screen font-sans"
     >
-      {/* ── 1. HERO ─────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden px-4 pt-16 pb-14 text-center md:pt-24 md:pb-20">
-        {/* Glow blobs */}
+      {/* ── 1. HERO + VIDÉO ─────────────────────────────────────── */}
+      <section className="relative overflow-hidden px-4 pt-12 pb-10 text-center md:pt-20 md:pb-16">
+        {/* Glow blob */}
         <div
           aria-hidden
           className="pointer-events-none absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full opacity-20 blur-3xl"
@@ -91,12 +91,13 @@ export default function Page() {
         />
 
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 rounded-full border border-[#8b5cf6]/40 bg-[#8b5cf6]/10 px-4 py-1.5 text-sm font-medium text-[#a78bfa] mb-8">
+        <div className="inline-flex items-center gap-2 rounded-full border border-[#8b5cf6]/40 bg-[#8b5cf6]/10 px-4 py-1.5 text-sm font-medium text-[#a78bfa] mb-5">
           <span className="h-2 w-2 rounded-full bg-[#8b5cf6] animate-pulse" />
           Formation 100% gratuite · Accès immédiat
         </div>
 
-        <h1 className="mx-auto max-w-3xl text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl md:text-5xl">
+        {/* Titre */}
+        <h1 className="mx-auto max-w-3xl text-2xl font-extrabold leading-tight tracking-tight text-white sm:text-3xl md:text-4xl">
           Ta modèle IA peut générer ses{" "}
           <span
             style={{
@@ -110,7 +111,8 @@ export default function Page() {
           </span>
         </h1>
 
-        <div className="mt-8 flex flex-col items-center gap-3">
+        {/* CTA */}
+        <div className="mt-6 flex flex-col items-center gap-2">
           <a
             href={CTA_URL}
             onClick={trackLead}
@@ -121,42 +123,34 @@ export default function Page() {
               transition: "all 0.2s ease",
             }}
           >
-            Je veux accéder à la formation gratuite →
+            Rejoindre la communauté gratuite →
           </a>
           <p className="text-sm text-[#71717a]">
             Inscription gratuite · Accès immédiat
           </p>
         </div>
-      </section>
 
-      {/* ── 2. VIDÉO VSL ────────────────────────────────────────── */}
-      <section className="px-4 pb-16 md:pb-24">
-        <div className="mx-auto max-w-2xl">
-          <p className="mb-5 text-center text-sm font-semibold uppercase tracking-widest text-[#8b5cf6]">
-            Regarde ça avant de t&apos;inscrire
-          </p>
-          <h2 className="mb-6 text-center text-2xl font-bold text-white md:text-3xl">
-            2 minutes qui vont changer ta vision des revenus en ligne
-          </h2>
-
+        {/* Vidéo VSL */}
+        <div className="mx-auto mt-8 max-w-2xl">
           <div
-            className="relative overflow-hidden rounded-2xl"
+            className="overflow-hidden rounded-2xl"
             style={{
               background: "#111111",
               border: "1px solid rgba(255,255,255,0.08)",
               boxShadow: "0 25px 60px rgba(0,0,0,0.6)",
             }}
           >
-            <video controls playsInline preload="metadata" style={{ width: "100%" }}>
-              <source
-                src="https://image2url.com/r2/default/videos/1775831427597-7b4534e5-ed35-431a-be07-9da065ef12eb.mov"
-                type="video/mp4"
+            <div style={{ padding: "56.25% 0 0 0", position: "relative", width: "100%", borderRadius: "12px", overflow: "hidden" }}>
+              <iframe
+                src="https://player.vimeo.com/video/1182360434?badge=0&autopause=0&player_id=0&app_id=58479"
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+                title="VSL Fanatic"
               />
-              Votre navigateur ne supporte pas la lecture vidéo.
-            </video>
+            </div>
           </div>
-
-          <p className="mt-4 text-center text-sm italic text-[#71717a]">
+          <p className="mt-3 text-center text-sm italic text-[#71717a]">
             Dans cette vidéo : comment fonctionne Fanatic, pourquoi nos
             créateurs gagnent de l&apos;argent rapidement, et comment accéder à
             toute la formation gratuitement.
@@ -362,7 +356,7 @@ export default function Page() {
           <p className="mt-5 text-sm text-[#71717a]">
             Déjà inscrit ?{" "}
             <a
-              href="https://discord.gg/fanaticplace"
+              href="https://discord.gg/CYcUDngnvp"
               className="underline hover:text-[#a1a1aa] transition-colors"
               target="_blank"
               rel="noopener noreferrer"
